@@ -8,5 +8,5 @@ channels:
   - https://repo.anaconda.com/pkgs/r
   - https://repo.anaconda.com/pkgs/msys2
 dependencies:
-  - python=3.9
+  - python=3.12
 prefix: D:\Application\Anaconda\envs\cs197lec2
