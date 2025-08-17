@@ -42,7 +42,7 @@ class Inception(nn.Module):
 
 ## GoogLeNet 架构
 
-![image-20250816144351124](C:\Users\chy20\AppData\Roaming\Typora\typora-user-images\image-20250816144351124.png)
+![image-20250816144351124](Images/image-20250816144351124.png)
 
 五段 九个Inception
 
@@ -128,5 +128,6 @@ v4 残差连接
 4条有不同超参数的卷积层和池化层的路来抽取不同的信息
 
 主要优点是模型参数小，计算复杂度低
+
 
 使用了9歌Inception块，是第一个达到上百层的网络
