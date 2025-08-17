@@ -17,13 +17,23 @@
 
 - 固定小批量里的均值和方差
 
+
 $$
-\mu _B=\frac{1}{|B|}\sum_{i\in B}x_i\\ \sigma_B^2=\frac{1}{|B|}\sum_{i\in B}(x_i-\mu_B)^2+\epsilon
-\\
-x_{i+1}=\gamma\frac{x_i-\mu_B}{\sigma_B}+\beta
+\mu_B = \frac{1}{|B|} \sum_{i \in B} x_i,\quad 
+\sigma_B^2 = \frac{1}{|B|} \sum_{i \in B} (x_i - \mu_B)^2 + \epsilon
 $$
 
-其中，$\gamma$和$\beta$是可以学习的，这就是换了个正态分布
+$$
+x_{i+1} = \gamma \frac{x_i - \mu_B}{\sqrt{\sigma_B^2}} + \beta
+$$
+
+
+
+其中，
+$\gamma$
+和
+$\beta$
+是可以学习的，这就是换了个正态分布
 
 ```python
 def batch_norm(X, gamma, beta, moving_mean, moving_var, eps, momentum):
@@ -105,6 +115,7 @@ class BatchNorm(nn.Module):
 
 固定小批量中的均值和方差，然后学习出适合的偏移和缩放
 可以加速收敛速度，但一般不改变模型精度
+
 
 
 
