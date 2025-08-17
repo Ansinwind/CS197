@@ -6,7 +6,7 @@
 
 和单独3x3或5x5卷积层比，Inception块有更少的参数个数和计算复杂度
 
-![image-20250816144007777](Images\image-20250816144007777.png)
+![image-20250816144007777](Images/image-20250816144007777.png)
 
 ```python
 class Inception(nn.Module):

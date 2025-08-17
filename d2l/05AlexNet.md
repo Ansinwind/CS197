@@ -10,7 +10,7 @@
 
 数据 ImageNet
 
-![image-20250816115016051](Images\image-20250816115016051.png)
+![image-20250816115016051](Images/image-20250816115016051.png)
 
 AlexNet架构
 

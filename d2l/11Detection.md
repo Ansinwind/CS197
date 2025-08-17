@@ -24,7 +24,7 @@
 ### Faster RCNN
 
 - 使用一个区域提议网络来替代启发式搜索获得更好的锚框
-- RPN：(2 stage)![image-20250816153927688](Images\image-20250816153927688.png)
+- RPN：(2 stage)![image-20250816153927688](Images/image-20250816153927688.png)
 
 ### Mask RCNN
 
