@@ -1,6 +1,6 @@
 # 线性回归
 
-![image-20250803181422763](C:\Users\chy20\AppData\Roaming\Typora\typora-user-images\image-20250803181422763.png)
+![image-20250803181422763](D:\CHY\AI\d2l\Images\image-20250803181422763.png)
 
 ## 原理
 
