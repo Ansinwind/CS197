@@ -4,7 +4,7 @@
 
 硬性的类别 软性的类别 都使用软类别的模型
 
-![image-20250803181450237](C:\Users\chy20\AppData\Roaming\Typora\typora-user-images\image-20250803181450237.png)
+![image-20250803181450237](Images\image-20250803181450237.png)
 $$
 \mathbf{o} = \mathbf{W} \mathbf{x} + \mathbf{b}
 $$

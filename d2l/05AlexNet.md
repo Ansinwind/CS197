@@ -10,7 +10,7 @@
 
 数据 ImageNet
 
-<img src="C:\Users\chy20\AppData\Roaming\Typora\typora-user-images\image-20250816115016051.png" alt="image-20250816115016051" style="zoom:67%;" />
+![image-20250816115016051](Images\image-20250816115016051.png)
 
 AlexNet架构
 

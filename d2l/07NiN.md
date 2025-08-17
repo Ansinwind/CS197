@@ -12,7 +12,7 @@
 
 起到全连接层的作用
 
-![image-20250816142757887](C:\Users\chy20\AppData\Roaming\Typora\typora-user-images\image-20250816142757887.png)
+![image-20250816142757887](Images\image-20250816142757887.png)
 
 ```python
 def nin_block(in_channels, out_channels, kernel_size, strides, padding):

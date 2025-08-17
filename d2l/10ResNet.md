@@ -17,7 +17,7 @@
 - 高宽减半ResNet块 （步幅2）
 - 后接多个高宽不变ResNet块
 
-![image-20250816145909830](C:\Users\chy20\AppData\Roaming\Typora\typora-user-images\image-20250816145909830.png)
+![image-20250816145909830](Images\image-20250816145909830.png)
 
 类似VGG和GoogLeNet的总体架构，替换成ResNet块
 

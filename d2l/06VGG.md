@@ -10,7 +10,7 @@
 
 
 
-![image-20250816135350941](C:\Users\chy20\AppData\Roaming\Typora\typora-user-images\image-20250816135350941.png)
+![image-20250816135350941](Images\image-20250816135350941.png)
 
 三个参数：
 
