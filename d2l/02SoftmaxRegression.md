@@ -10,7 +10,8 @@ $$
 \mathbf{o} = \mathbf{W} \mathbf{x} + \mathbf{b}
 $$
 
-参数开销：$O(dq) \to O(\frac{dq}{n})$
+参数开销：
+$O(dq) \to O(\frac{dq}{n})$
 
 ## 基本
 
@@ -34,15 +35,22 @@ $$
 P(\mathbf{Y} \mid \mathbf{X}) = \prod_{i=1}^n P(\mathbf{y}^{(i)} \mid \mathbf{x}^{(i)}).
 $$
 
-根据最大似然估计，我们最大化$P(\mathbf{Y} \mid \mathbf{X})$，相当于最小化负对数似然：
+根据最大似然估计，我们最大化
+$P(\mathbf{Y} \mid \mathbf{X})$
+，相当于最小化负对数似然：
+
 
 $$
 -\log P(\mathbf{Y} \mid \mathbf{X}) = \sum_{i=1}^n -\log P(\mathbf{y}^{(i)} \mid \mathbf{x}^{(i)})
-
 = \sum_{i=1}^n l(\mathbf{y}^{(i)}, \hat{\mathbf{y}}^{(i)}),
 $$
 
-其中，对于任何标签$\mathbf{y}$和模型预测$\hat{\mathbf{y}}$，损失函数为：
+
+其中，对于任何标签
+$\mathbf{y}$
+和模型预测
+$\hat{\mathbf{y}}$
+，损失函数为：
 
 $$
 l(\mathbf{y}, \hat{\mathbf{y}}) = - \sum_{j=1}^q y_j \log \hat{y}_j.
@@ -64,3 +72,4 @@ $$
 
 
 **$l$:交叉熵损失**
+
