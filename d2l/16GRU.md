@@ -25,12 +25,15 @@ $$
 
 
 **候选隐状态(由R进行控制)**
+
 $$
 \tilde H_t = \tanh (X_tW_{xh}+(R_t\odot H_{t-1})W_{hh}+b_h)
 $$
 
 
 **隐状态**
+
 $$
 H_t=Z_t\odot H_{t-1}+(1-Z_t)\odot \tilde H_t
 $$
+
