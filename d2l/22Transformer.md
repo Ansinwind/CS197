@@ -6,8 +6,8 @@
 
 
 
-- 给定序列 $ \bf x_1,...,x_n, \forall x_i \in \mathbb R^d $
-- 自注意力池化层把序列元素当作k,v,q来对序列抽取特征得到$ \bf y_1,...,y_n $
+- 给定序列 $\bf x_1,...,x_n, \forall x_i \in \mathbb R^d $
+- 自注意力池化层把序列元素当作k,v,q来对序列抽取特征得到 $\bf y_1,...,y_n$
 
 $$
 \textbf y_i = f(\textbf x_i,(\textbf x_1,\textbf x_1),...,(\textbf x_n,\textbf x_n)) \in \mathbb R^d
@@ -17,9 +17,9 @@ $$
 
 |            | CNN          | RNN         | 自注意力    |
 | ---------- | ------------ | ----------- | ----------- |
-| 计算复杂度 | $ O(knd^2) $ | $ O(nd^2) $ | $ O(n^2d) $ |
-| 并行度     | $ O(n) $     | $ O(1) $    | $ O(n) $    |
-| 最长路径   | $ O(n/k) $   | $ O(n) $    | $ O(1) $    |
+| 计算复杂度 | $O(knd^2) $ | $O(nd^2) $ | $O(n^2d) $ |
+| 并行度     | $O(n) $     | $O(1) $    | $O(n) $    |
+| 最长路径   | $O(n/k) $   | $O(n) $    | $O(1) $    |
 
 
 
@@ -30,7 +30,8 @@ $$
 
 > [!tip]
 >
-> 假设长度为$ n $的序列是$ \textbf X \in \mathbb R^{n\times d} $，那么使用位置编码矩阵$ \textbf P \in \mathbb R^{n\times d} $来输出$ \textbf X +\textbf P $作为自编码输入
+> 假设长度为 $n$的序列是 $\textbf X \in \mathbb R^{n\times d} $，那么使用位置编码矩阵 $\textbf P \in \mathbb R^{n\times d} $来输出 $\textbf X +\textbf P$作为自编码输入
+>
 > $$
 > p_{i,2j}=\sin (\frac i{10000^\frac{2j}d}),p_{i,zj+1}=\cos(\frac i{10000^\frac{2j}d})
 > $$
@@ -39,8 +40,8 @@ $$
 >
 > **相对位置信息**
 >
-> - 位置于$ i+\delta $处的位置编码可以线性投影位置$ i $处的位置编码来表示
-> - 记$ \omega_j=\frac1{10000^\frac{2j}d} $
+> - 位置于 $i+\delta $处的位置编码可以线性投影位置 $i $处的位置编码来表示
+> - 记 $\omega_j=\frac1{10000^\frac{2j}d} $
 >
 > $$
 > [\begin{matrix} {\cos(\delta\omega_j)}&{\sin(\delta\omega_j)} \\ {-\sin(\delta\omega_j)}&{\cos(\delta\omega_j)}\end{matrix}][\begin{matrix} {p_{i,2j}} \\ {p_{i,2j+1}}\end{matrix}] = [\begin{matrix} {p_{i+\delta,2j}} \\ {p_{i+\delta,2j+1}}\end{matrix}]
@@ -81,9 +82,9 @@ $$
 ### 基于位置的前馈网络
 
 - 全连接 （Positionwise FFN）
-- 将输入形状由$ (b,n,d) $转化为$ (bn,d) $
+- 将输入形状由 $(b,n,d) $转化为 $(bn,d) $
 - 作用两个全连接层
-- 输出形状由$ (bn,d) $变化为$ (b,n,d) $
+- 输出形状由 $(bn,d) $变化为 $(b,n,d) $
 - 等价于两层核窗口为1的一维卷积层
 
 
@@ -100,7 +101,7 @@ $$
 
 ### 信息传递
 
-- 编码器种的输出 $ \bf y_1,...,y_n $
+- 编码器种的输出 $\bf y_1,...,y_n $
 - 将其作为解码中第$ i $个Transformer块中多头注意力的key和value
   - 它的query来自目标序列
 - 意味着编码器和解码器中输出维度是一样的
@@ -109,9 +110,9 @@ $$
 
 ### 预测
 
-- 预测第$ t+1 $个输出时
-- 解码器中输入前$ t $个预测值
-  - 在自注意力中，前$ t $个预测值作为key和value，第$ t $个预测值还作为query
+- 预测第 $t+1 $个输出时
+- 解码器中输入前 $t $个预测值
+  - 在自注意力中，前 $t $个预测值作为key和value，第 $t $个预测值还作为query
 
 
 
@@ -120,3 +121,4 @@ $$
 - Transformer是一个纯使用注意力的编码-解码器
 - 编码器和解码器都有n个transformer块
 - 每个块里使用多头自注意力，基于位置的前馈网络，和层归一化
+
