@@ -27,6 +27,7 @@ K(u)=\frac1{\sqrt{2\pi}}\exp(-\frac{u^2}2)
 $$
 
 那么
+
 $$
 f(x)=\sum_{i=1}^n softmax(-\frac12(x-x_i)^2)y_i
 $$
@@ -44,12 +45,14 @@ $$
 
 > [!tip]
 >
-> **注意力权重** $ \alpha (x,x_i)$
+> **注意力权重** $\alpha (x,x_i)$
 >
-> **注意力分数** $ -\frac12(x-x_i)^2 $
+> **注意力分数** $-\frac12(x-x_i)^2$
+> 
 > $$
 > \sum_i\alpha(x,x_i)y_i = \sum_{i=1}^nsoftmax(-\frac12(x-x_i)^2)y_i
 > $$
+> 
 
 ### 拓展到高维
 
@@ -57,7 +60,7 @@ $$
 
 > [!important]
 >
-> - 假设query $ \bf q \in \mathbb R^q$, 有$ m $对key-value$ (\bf k_i,\bf v_i) $,其中 $ \bf k_i \in \mathbb R^k, \bf v_i \in \mathbb R^n $
+> - 假设query $\bf q \in \mathbb R^q$ , 有 $m$ 对key-value $(\bf k_i,\bf v_i)$ ,其中 $\bf k_i \in \mathbb R^k, \bf v_i \in \mathbb R^n$
 > - 注意力池化层：
 >
 > $$
@@ -67,6 +70,7 @@ $$
 > $$
 > \alpha(\textbf q,\textbf k_i) = softmax(a(\textbf q,\textbf k_i))=\frac{\exp(a(\textbf q,\textbf k_i))}{\sum_{j=1}^m\exp(a(\textbf q,\textbf k_j)} \in \mathbb R
 > $$
+> 
 
 ### Additive Attention
 
@@ -88,4 +92,5 @@ $$
 - 常见的分数计算：
   - 将query和key合并起来进入一个单输出单隐藏层的MLP
   - 直接将query和key做内积
+
 
