@@ -46,7 +46,7 @@ W和V为两个权重矩阵
 - 能建模上下文依赖
 - 支持不定长输入 不再需要FNN固定长度输入格式
 
-![image-20250727201239770](Image/image-20250727201239770.png)![image-20250727201344091](C:\Users\chy20\AppData\Roaming\Typora\typora-user-images\image-20250727201344091.png)
+![image-20250727201239770](Image/image-20250727201239770.png)![image-20250727201344091](Image/image-20250727201344091.png)
 
 ### Encoder - Decoder
 
@@ -113,4 +113,5 @@ $$Softmax$$ 得分概率
 
 1. 计算复杂度降低
 2. **并行计算能力**
+
 3. 模型内部学习**长距离依赖**的能力
